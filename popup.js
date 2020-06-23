@@ -105,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function ()  {
                   alert(escMsg[1].errorMessage);
                 });
               });
+              socket.on("checkStatusFailed", (resMsg)=>{
+                answerDiv.innerHTML = `Not enough context to answer. Please ask the speaker after the session!`
+              });
             }
             });
           /*transcriptx = "Sundar Pichai is an Indian-American business executive, the chief executive officer (CEO) of Alphabet Inc. and its subsidiary Google LLC. Pichai began his career as a materials engineer and joined Google as a management executive in 2004. He rose to become the company's Product Chief and the CEO in 2015, as part of the restructuring process that turned Alphabet Inc. into Google's parent company. In December 2019, he additionally became CEO of Alphabet Inc."*/
